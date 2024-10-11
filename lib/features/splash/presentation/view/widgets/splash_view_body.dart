@@ -28,7 +28,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     initTextSlidingFadingAnimation();
     initImageSlidingFadingAnimation();
-    NavigateToHome();
+    navigateToHome();
     super.initState();
   }
 
@@ -114,9 +114,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
     _fadeeTextanimationController.forward();
   }
 
-  void NavigateToHome() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Get.to(const HomeView(), transition: Transition.leftToRight);
-    });
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 3),
+        () => Get.to(const HomeView(), transition: Transition.leftToRight));
   }
 }
