@@ -26,7 +26,7 @@ abstract class AppStyles {
   static const textStle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,
-    fontFamily: AppConstants.kGtSectraFine,
+    // fontFamily: AppConstants.kGtSectraFine,
   );
 
   static const textStle30 = TextStyle(
@@ -35,6 +35,7 @@ abstract class AppStyles {
     fontFamily: AppConstants.kGtSectraFine,
   );
   static const textStle14 = TextStyle(
+    color: Colors.white,
     fontSize: 14,
     fontWeight: FontWeight.normal,
   );
