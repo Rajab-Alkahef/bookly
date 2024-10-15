@@ -20,3 +20,7 @@ class AppColors {
 class AppStrings {
   static const String appName = "Bookly";
 }
+
+class AppConstants {
+  static const kGtSectraFine = "GT Sectra Fine";
+}

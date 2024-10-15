@@ -1,5 +1,6 @@
 import 'package:bookly/core/utils/constsants.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/presentation/view/widgets/best_seller_list_view.dart';
 import 'package:bookly/features/home/presentation/view/widgets/custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/view/widgets/featured_list_view.dart';
 import 'package:flutter/material.dart';
@@ -25,9 +26,10 @@ class HomeViewBody extends StatelessWidget {
               const EdgeInsets.symmetric(horizontal: AppSize.kDefaultPadding),
           child: Text(
             "Best Seller",
-            style: AppStyles.styleBold20(),
+            style: AppStyles.styleBold24(),
           ),
         ),
+        const BestSellerListViewItem(),
       ],
     );
   }
