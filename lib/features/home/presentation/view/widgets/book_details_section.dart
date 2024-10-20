@@ -1,4 +1,6 @@
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/data/models/book_model/image_links.dart';
+import 'package:bookly/features/home/data/models/book_model/volume_info.dart';
 import 'package:bookly/features/home/presentation/view/widgets/book_rating.dart';
 import 'package:bookly/features/home/presentation/view/widgets/books_action.dart';
 import 'package:bookly/features/home/presentation/view/widgets/cutsom_book_image_item.dart';
@@ -44,6 +46,9 @@ class BookDetailSection extends StatelessWidget {
           height: 10,
         ),
         const BookRating(
+          volumeInfo: VolumeInfo(
+              imageLinks: ImageLinks(
+                  smallThumbnail: "smallThumbnail", thumbnail: "thumbnail")),
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const SizedBox(
