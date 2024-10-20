@@ -7,21 +7,25 @@ class CustomErrorWidget extends StatelessWidget {
   final String errMessage;
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
+        Icon(
           FontAwesomeIcons.triangleExclamation,
-          size: 40,
+          size: width / 15,
         ),
         const SizedBox(
           height: 12,
         ),
-        Text(
-          textAlign: TextAlign.center,
-          errMessage,
-          style: AppStyles.textStle14,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: Text(
+            textAlign: TextAlign.center,
+            errMessage,
+            style: AppStyles.textStle14.copyWith(fontSize: width / 35),
+          ),
         ),
       ],
     );

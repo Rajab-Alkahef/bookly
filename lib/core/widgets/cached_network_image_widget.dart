@@ -28,7 +28,7 @@ class CachedNetworkImageWidget extends StatelessWidget {
               return Container(
                 color: const Color.fromARGB(255, 45, 0, 77),
                 child: const CustomErrorWidget(
-                  errMessage: "Oops there was an error while loading image!",
+                  errMessage: "Oops there was an error!",
                 ),
               );
             },

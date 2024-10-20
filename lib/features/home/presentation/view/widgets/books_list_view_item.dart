@@ -29,7 +29,7 @@ class BooksListViewItem extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CachedNetworkImageWidget(
-                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? ""),
             const SizedBox(
               width: 30,
             ),
