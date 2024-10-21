@@ -20,7 +20,10 @@ class BooksListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+        GoRouter.of(context).push(
+          AppRouter.kBookDetailsView,
+          extra: bookModel,
+        );
       },
       child: SizedBox(
         height: 130,
@@ -29,7 +32,8 @@ class BooksListViewItem extends StatelessWidget {
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CachedNetworkImageWidget(
-                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? ""),
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ??
+                    "https://plus.unsplash.com/premium_photo-1669652639337-c513cc42ead6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
             const SizedBox(
               width: 30,
             ),
