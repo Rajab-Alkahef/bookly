@@ -1,7 +1,5 @@
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/data/models/book_model/book_model.dart';
-import 'package:bookly/features/home/data/models/book_model/image_links.dart';
-import 'package:bookly/features/home/data/models/book_model/volume_info.dart';
 import 'package:bookly/features/home/presentation/view/widgets/book_rating.dart';
 import 'package:bookly/features/home/presentation/view/widgets/books_action.dart';
 import 'package:bookly/features/home/presentation/view/widgets/cutsom_book_image_item.dart';
@@ -37,7 +35,7 @@ class BookDetailSection extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            bookModel.volumeInfo.authors![0],
+            bookModel.volumeInfo.authors?[0] ?? " ",
             style: AppStyles.textStle18.copyWith(
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.w500,
@@ -54,7 +52,9 @@ class BookDetailSection extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        const BooksAction(),
+        BooksAction(
+          bookModel: bookModel,
+        ),
       ],
     );
   }

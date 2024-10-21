@@ -59,7 +59,7 @@ class BooksListViewItem extends StatelessWidget {
                     height: 3,
                   ),
                   Text(
-                    bookModel.volumeInfo.authors![0],
+                    bookModel.volumeInfo.authors?[0] ?? " ",
                     style: AppStyles.textStle14.copyWith(
                         color: Colors.white.withOpacity(0.5),
                         fontWeight: FontWeight.bold),
