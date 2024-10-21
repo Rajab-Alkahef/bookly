@@ -49,7 +49,7 @@ class BooksListViewItem extends StatelessWidget {
                       // softWrap: true,
                       // maxLines: 3,
                       overflow: TextOverflow.ellipsis,
-                      bookModel.volumeInfo.title!,
+                      bookModel.volumeInfo.title ?? "Default",
                       style: AppStyles.textStle20.copyWith(
                           fontFamily: AppConstants.kGtSectraFine,
                           fontWeight: FontWeight.bold),
